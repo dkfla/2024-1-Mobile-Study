@@ -105,3 +105,23 @@ Container는 자식 위젯에 최대한 맞게 크기를 잡는다.
 
 3. width와 height가 설정된다면?
 설정된 크기대로 따라간다. (둘 중 하나만 설정된다면, 위의 두 규칙을 따름)
+---
+# Row, Column 위젯
+여러 개의 위젯 배치를 도와주는 Multichild-Layout 위젯   
+
+**Row** : 가로축 방향으로 위젯 진열
+
+**Column** : 세로축 방향으로 위젯 진열   
+
+---
+## Row, Column 위젯의 프로퍼티
+### children
+- List<Widget> 을 받음
+- required, 필수 프로퍼티로 넣어줘야 함
+- 내부에 들어간 위젯의 크기가 커지면 오버플로우
+### MainAxisAlignment 와 CrossAxisAlignment
+Row 위젯 : MainAxisAlignment - 가로축 정렬 / CrossAxisAlignment - 세로축 정렬   
+Column 위젯 : MainAxisAlignment - 세로축 정렬 / CrossAxisAlignment - 가로축 정렬   
+
+MainAxisAlignment enum : start(기본), center, end, spaceAround, spaceBetween, spaceEvenly   
+CrossAxisAlignment enum : start, center(기본), end, stretch, baseline
